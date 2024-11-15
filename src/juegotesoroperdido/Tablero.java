@@ -45,7 +45,7 @@ public class Tablero {
             int horizontal = 10 - vertical;  // Número de celdas horizontales
             boolean empiezaVertical = rand.nextBoolean();
 
-            if (empiezaVertical) {
+            if (empiezaVertical == true ) {
                 if (jugador.getX() + vertical < SIZE && jugador.getY() + horizontal < SIZE) {
                     tesoroX = jugador.getX() + vertical;  
                     tesoroY = jugador.getY() + horizontal;  

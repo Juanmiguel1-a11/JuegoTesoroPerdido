@@ -40,7 +40,7 @@ public class Tablero {
         Random rand = new Random();
         boolean posicionValida = false;
 
-        while (!posicionValida) {
+        while (posicionValida== false) {
             int vertical = rand.nextInt(10); // Número de celdas verticales (0 a 9)
             int horizontal = 10 - vertical;  // Número de celdas horizontales
             boolean empiezaVertical = rand.nextBoolean();
@@ -63,7 +63,7 @@ public class Tablero {
         tablero[tesoroX][tesoroY] = 'T';  // Revelar el tesoro para saber si funciona bien :D
     }
 
-    // Coloca 6 minas aleatorias, lejos del tesoro
+    
     public void ubicarMinas() {
         Random rand = new Random();
         int minasUbicadas = 0;

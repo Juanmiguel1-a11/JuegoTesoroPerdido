@@ -88,24 +88,32 @@ public class Tablero {
     }
 
     public void moverJugador(Jugador jugador, char direccion) {
-        tablero[jugador.getX()][jugador.getY()] = '*';  // Marca el rastro anterior
+        tablero[jugador.getX()][jugador.getY()] = '*';  // Marca el rastro del jugador
         int prevX = jugador.getX();
         int prevY = jugador.getY();
 
         switch (direccion) {
-            case 'w': if (jugador.getX() > 0) jugador.setX(jugador.getX() - 1); break;
-            case 's': if (jugador.getX() < SIZE - 1) jugador.setX(jugador.getX() + 1); break;
-            case 'a': if (jugador.getY() > 0) jugador.setY(jugador.getY() - 1); break;
-            case 'd': if (jugador.getY() < SIZE - 1) jugador.setY(jugador.getY() + 1); break;
-            case 'W': if (jugador.getX() > 0) jugador.setX(jugador.getX() - 1); break;
-            case 'S': if (jugador.getX() < SIZE - 1) jugador.setX(jugador.getX() + 1); break;
-            case 'A': if (jugador.getY() > 0) jugador.setY(jugador.getY() - 1); break;
-            case 'D': if (jugador.getY() < SIZE - 1) jugador.setY(jugador.getY() + 1); break;
+            case 'w': if (jugador.getX() > 0)
+                        jugador.setX(jugador.getX() - 1); break;
+            case 's': if (jugador.getX() < SIZE - 1) 
+                            jugador.setX(jugador.getX() + 1); break;
+            case 'a': if (jugador.getY() > 0) 
+                             jugador.setY(jugador.getY() - 1); break;
+            case 'd': if (jugador.getY() < SIZE - 1) 
+                            jugador.setY(jugador.getY() + 1); break;
+            case 'W': if (jugador.getX() > 0)
+                            jugador.setX(jugador.getX() - 1); break;
+            case 'S': if (jugador.getX() < SIZE - 1) 
+                            jugador.setX(jugador.getX() + 1); break;
+            case 'A': if (jugador.getY() > 0) 
+                            jugador.setY(jugador.getY() - 1); break;
+            case 'D': if (jugador.getY() < SIZE - 1) 
+                            jugador.setY(jugador.getY() + 1); break;
             default: System.out.println("Movimiento no válido"); return;
         }
 
         if (tablero[jugador.getX()][jugador.getY()] == '*') {
-            tablero[prevX][prevY] = '.';  // Limpia el asterisco si retrocede
+            tablero[prevX][prevY] = '.';  // Limpia el asterisco si el jugador retrocede
         }
         tablero[jugador.getX()][jugador.getY()] = 'J';
     }

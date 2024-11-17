@@ -137,5 +137,9 @@ public class Tablero {
     public boolean isJuegoTerminado() {
         return juegoTerminado;
     }
+    
+    public static void mondongo(){
+        
+    }
 }
 

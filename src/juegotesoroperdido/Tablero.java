@@ -9,8 +9,8 @@ import java.util.Random;
 public class Tablero {
     private static final int SIZE = 20;
     private static final int MINAS = 6;
-    private final char [][] tablero;
-    private final boolean[][] minas;
+    private char [][] tablero;
+    private boolean[][] minas;
     private int tesoroX, tesoroY;
     private boolean juegoTerminado = false;
 

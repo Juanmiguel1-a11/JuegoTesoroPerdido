@@ -138,8 +138,5 @@ public class Tablero {
         return juegoTerminado;
     }
     
-    public static void mondongo(){
-        
-    }
 }
 

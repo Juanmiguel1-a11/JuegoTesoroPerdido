@@ -27,7 +27,7 @@ public class JuegoTesoroPerdido {
             tablero.ubicarMinas();
 
             System.out.println("¡Bienvenido " + nombre + " al Juego del Tesoro Perdido!");
-            Instant start = Instant.now();
+            Instant inicio = Instant.now();
 
             while (tablero.isJuegoTerminado()==false) {
                 tablero.mostrarTablero();
@@ -38,7 +38,7 @@ public class JuegoTesoroPerdido {
             }
 
             Instant end = Instant.now();
-            Duration tiempoJuego = Duration.between(start, end);
+            Duration tiempoJuego = Duration.between(inicio, end);
             resultado.setTiempo(tiempoJuego);
             resultado.mostrarResultado();
 

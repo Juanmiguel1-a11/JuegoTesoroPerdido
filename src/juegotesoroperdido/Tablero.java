@@ -27,7 +27,7 @@ public class Tablero {
         }
     }
 
-    // Ubica al jugador en una posición aleatoria
+    // Ubicar al jugador en una posición aleatoria
     public void ubicarJugador(Jugador jugador) {
         Random rand = new Random();
         jugador.setX(rand.nextInt(SIZE));
@@ -35,7 +35,7 @@ public class Tablero {
         tablero[jugador.getX()][jugador.getY()] = 'J';
     }
 
-    // Coloca el tesoro formando una "L" de exactamente 10 celdas respecto al jugador
+    // Coloca el tesoro formando una "L" de exactamente 10 celdas
     public void ubicarTesoro(Jugador jugador) {
         Random rand = new Random();
         boolean posicionValida = false;
@@ -93,21 +93,29 @@ public class Tablero {
         int prevY = jugador.getY();
 
         switch (direccion) {
-            case 'w': if (jugador.getX() > 0)
+            case 'w': 
+                 if (jugador.getX() > 0)
                         jugador.setX(jugador.getX() - 1); break;
-            case 's': if (jugador.getX() < SIZE - 1) 
+            case 's':
+                    if (jugador.getX() < SIZE - 1) 
                             jugador.setX(jugador.getX() + 1); break;
-            case 'a': if (jugador.getY() > 0) 
+            case 'a': 
+                 if (jugador.getY() > 0) 
                              jugador.setY(jugador.getY() - 1); break;
-            case 'd': if (jugador.getY() < SIZE - 1) 
+            case 'd': 
+                 if (jugador.getY() < SIZE - 1) 
                             jugador.setY(jugador.getY() + 1); break;
-            case 'W': if (jugador.getX() > 0)
+            case 'W':
+                    if (jugador.getX() > 0)
                             jugador.setX(jugador.getX() - 1); break;
-            case 'S': if (jugador.getX() < SIZE - 1) 
+            case 'S': 
+                    if (jugador.getX() < SIZE - 1) 
                             jugador.setX(jugador.getX() + 1); break;
-            case 'A': if (jugador.getY() > 0) 
+            case 'A':
+                    if (jugador.getY() > 0) 
                             jugador.setY(jugador.getY() - 1); break;
-            case 'D': if (jugador.getY() < SIZE - 1) 
+            case 'D':
+                    if (jugador.getY() < SIZE - 1) 
                             jugador.setY(jugador.getY() + 1); break;
             default: System.out.println("Movimiento no válido"); return;
         }
@@ -119,10 +127,9 @@ public class Tablero {
     }
 
     public void verificarEstadoJuego(Jugador jugador, Resultado resultado) {
-        if (minas[jugador.getX()][jugador.getY()]) {
+        if (minas[jugador.getX()][jugador.getY()]==true) {
             jugador.perderVida();
-            System.out.println("¡Pisaste una mina! Vidas restantes: " + jugador.getVidas());
-            tablero[jugador.getX()][jugador.getY()] = 'M';  // Muestra la mina cuando la pisa
+            System.out.println("¡Pisaste una mina! Vidas restantes: " + jugador.getVidas());       
             if (jugador.getVidas() == 0) {
                 System.out.println("¡Has perdido todas tus vidas!");
                 juegoTerminado = true;

@@ -121,7 +121,7 @@ public class Tablero {
         }
 
         if (tablero[jugador.getX()][jugador.getY()] == '*') {
-            tablero[prevX][prevY] = '.';  // Limpia el asterisco si el jugador retrocede
+            tablero[prevX][prevY] = '.';  // Limpia el rastro si el jugador retrocede
         }
         tablero[jugador.getX()][jugador.getY()] = 'J';
     }
@@ -135,7 +135,7 @@ public class Tablero {
                 juegoTerminado = true;
             }
         } else if (jugador.getX() == tesoroX && jugador.getY() == tesoroY) {
-            System.out.println("¡Felicidades! Has encontrado el tesoro.");
+            System.out.println("Felicidades,W Has encontrado el tesoro.");
             juegoTerminado = true;
             resultado.setLlegadaTesoro(true);
         }

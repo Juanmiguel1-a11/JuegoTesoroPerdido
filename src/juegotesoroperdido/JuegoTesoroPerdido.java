@@ -42,7 +42,7 @@ public class JuegoTesoroPerdido {
             resultado.setTiempo(tiempoJuego);
             resultado.mostrarResultado();
 
-            System.out.println("¿Quieres jugar de nuevo? (S para sí, cualquier otra tecla para salir):");
+            System.out.println("¿Quieres jugar de nuevo? (S para si, cualquier otra tecla para salir):");
             char respuesta = sc.next().charAt(0);
             jugarDeNuevo = (respuesta == 'S' || respuesta == 's');
             sc.nextLine(); // Captura el salto de línea restante

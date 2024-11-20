@@ -66,7 +66,7 @@ public class Tablero {
             }
         }
 
-        tablero[tesoroX][tesoroY] = 'T'; // Revelar el tesoro
+      //  tablero[tesoroX][tesoroY] = 'T'; // Revelar el tesoro para ver si esta funcionando bien :D
     }
 
     public void ubicarMinas() {
@@ -78,7 +78,7 @@ public class Tablero {
 
             if (!((Math.abs(minaX - tesoroX) <= 1) && (Math.abs(minaY - tesoroY) <= 1)) && tablero[minaX][minaY] == '.') {
                 minas[minaX][minaY] = true;
-                tablero[minaX][minaY] = 'M'; // Revelar las minas
+              //  tablero[minaX][minaY] = 'M'; //  Revelar las minas para ver si esta funcionando bien :D
                 minasUbicadas++;
             }
         }
@@ -109,10 +109,14 @@ public class Tablero {
         int prevY = jugador.getY();
 
         switch (direccion) {
-            case 'w': if (jugador.getX() > 0) jugador.setX(jugador.getX() - 1); break;
-            case 's': if (jugador.getX() < SIZE - 1) jugador.setX(jugador.getX() + 1); break;
-            case 'a': if (jugador.getY() > 0) jugador.setY(jugador.getY() - 1); break;
-            case 'd': if (jugador.getY() < SIZE - 1) jugador.setY(jugador.getY() + 1); break;
+            case 'w': if (jugador.getX() > 0)
+                jugador.setX(jugador.getX() - 1); break;
+            case 's': if (jugador.getX() < SIZE - 1)
+                jugador.setX(jugador.getX() + 1); break;
+            case 'a': if (jugador.getY() > 0)
+                jugador.setY(jugador.getY() - 1); break;
+            case 'd': if (jugador.getY() < SIZE - 1)
+                jugador.setY(jugador.getY() + 1); break;
             default: System.out.println("Movimiento no válido"); return;
         }
 

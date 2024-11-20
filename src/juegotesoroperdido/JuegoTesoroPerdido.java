@@ -32,7 +32,7 @@ public class JuegoTesoroPerdido {
             while (tablero.isJuegoTerminado()==false) {
                 tablero.mostrarTablero();
                 System.out.println("Mueve con las teclas W (arriba), S (abajo), A (izquierda), D (derecha)");
-                char movimiento = sc.next().charAt(0);
+                char movimiento = sc.next().toLowerCase().charAt(0);
                 tablero.moverJugador(jugador, movimiento);
                 tablero.verificarEstadoJuego(jugador, resultado);
             }

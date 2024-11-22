@@ -47,7 +47,7 @@ public class Tablero {
         boolean posicionValida = false;
 
         while (!posicionValida) {
-            int vertical = rand.nextInt(10);
+            int vertical = rand.nextInt(9)+1;
             int horizontal = 10 - vertical;
             boolean empiezaVertical = rand.nextBoolean();
 
@@ -66,7 +66,7 @@ public class Tablero {
             }
         }
 
-      //  tablero[tesoroX][tesoroY] = 'T'; // Revelar el tesoro para ver si esta funcionando bien :D
+        tablero[tesoroX][tesoroY] = 'T'; // Revelar el tesoro para ver si esta funcionando bien :D
     }
 
     public void ubicarMinas() {
@@ -78,7 +78,7 @@ public class Tablero {
 
             if (!((Math.abs(minaX - tesoroX) <= 1) && (Math.abs(minaY - tesoroY) <= 1)) && tablero[minaX][minaY] == '.') {
                 minas[minaX][minaY] = true;
-              //  tablero[minaX][minaY] = 'M'; //  Revelar las minas para ver si esta funcionando bien :D
+               tablero[minaX][minaY] = 'M'; //  Revelar las minas para ver si esta funcionando bien :D
                 minasUbicadas++;
             }
         }

@@ -9,8 +9,8 @@ import java.time.Instant;
 import java.util.Scanner;
 
 public class JuegoTesoroPerdido {
-    private static final int MAX_PARTIDAS = 100; // Máximo número de partidas registrables
-    private static Resultado[] estadisticas = new Resultado[MAX_PARTIDAS];
+    
+    private static Resultado[] estadisticas = new Resultado[10];
     private static int partidasJugadas = 0;
 
     public static void main(String[] args) {
@@ -24,7 +24,8 @@ public class JuegoTesoroPerdido {
             System.out.print("Elige una opcion: ");
 
             try {
-                int opcion = Integer.parseInt(sc.nextLine()); // Convertir la entrada a número
+                int opcion = sc.nextInt(); 
+                sc.nextLine();// limpiar buffer
                 switch (opcion) {
                     case 1:
                         juegoNuevo(sc);
@@ -76,7 +77,7 @@ public class JuegoTesoroPerdido {
         resultado.setTiempo(tiempoJuego);
         resultado.mostrarResultado();
 
-        // Guardar el resultado en el arreglo
+        // Guardar el resultado en el vector
         estadisticas[partidasJugadas] = resultado;
         partidasJugadas++;
     }

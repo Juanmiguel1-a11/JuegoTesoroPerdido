@@ -158,7 +158,7 @@ public class Tablero {
                 System.out.println("Te haz quedado sin vidas");
                 juegoTerminado = true;
             }
-        } else if (validarL()==true&&tablero[tesoroX][tesoroY]=='*' ) {
+        } else if (validarL()==true && tablero[tesoroX][tesoroY]=='*' ) {
                         System.out.println("Tesoro encontrado.");
             juegoTerminado = true;
             resultado.setLlegadaTesoro(true);

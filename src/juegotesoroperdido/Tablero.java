@@ -76,7 +76,7 @@ public class Tablero {
             int minaX = rand.nextInt(SIZE);
             int minaY = rand.nextInt(SIZE);
 
-            if (!((Math.abs(minaX - tesoroX) <= 1) && (Math.abs(minaY - tesoroY) <= 1)) && tablero[minaX][minaY] == '.') {
+            if ((Math.abs(minaX - tesoroX) > 1) && (Math.abs(minaY - tesoroY)>1) && tablero[minaX][minaY] == '.') {
                 minas[minaX][minaY] = true;
                 tablero[minaX][minaY] = 'M'; // Revelar las minas para depuración
                 minasUbicadas++;
@@ -158,7 +158,7 @@ public class Tablero {
                 System.out.println("Te haz quedado sin vidas");
                 juegoTerminado = true;
             }
-        } else if (validarL()&&tablero[tesoroX][tesoroY]=='*' ) {
+        } else if (validarL()==true&&tablero[tesoroX][tesoroY]=='*' ) {
                         System.out.println("Tesoro encontrado.");
             juegoTerminado = true;
             resultado.setLlegadaTesoro(true);

@@ -25,18 +25,22 @@ public class JuegoTesoroPerdido {
 
             try {
                 int opcion = Integer.parseInt(sc.nextLine()); // Convertir la entrada a número
-
-                if (opcion == 1) {
-                    juegoNuevo(sc);
-                } else if (opcion == 2) {
-                    mostrarEstadisticas();
-                } else if (opcion == 3) {
-                    System.out.println("¡Gracias por jugar! Hasta pronto.");
-                    continuar = false;
-                } else {
-                    System.out.println("Opción no valida. Intenta de nuevo.");
+                switch (opcion) {
+                    case 1:
+                        juegoNuevo(sc);
+                        break;
+                    case 2:
+                        mostrarEstadisticas();
+                        break;
+                    case 3:
+                        System.out.println("¡Gracias por jugar! Hasta pronto.");
+                        continuar = false;
+                        break;
+                    default:
+                        System.out.println("Opción no valida. Intenta de nuevo.");
+                        break;
                 }
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
                 System.out.println("Entrada no valida. Por favor, ingresa un numero (1, 2 o 3).");
             }
         }

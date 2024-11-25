@@ -5,7 +5,7 @@ package juegotesoroperdido;
  *
  * @author Miguelito
  */
-import java.time.*;
+import java.time.Duration;
 
 public class Resultado {
     private String nombre;
@@ -21,14 +21,26 @@ public class Resultado {
         this.llegadaTesoro = llegadaTesoro;
     }
 
+    public boolean isLlegadaTesoro() {
+        return llegadaTesoro;
+    }
+
     public void setTiempo(Duration tiempo) {
         this.tiempo = tiempo;
+    }
+
+    public Duration getTiempo() {
+        return tiempo;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public void mostrarResultado() {
         System.out.println("Jugador: " + nombre);
         if (llegadaTesoro) {
-            System.out.println("¡Has llegado al tesoro!");
+            System.out.println("Has llegado al tesoro");
         } else {
             System.out.println("No lograste llegar al tesoro.");
         }

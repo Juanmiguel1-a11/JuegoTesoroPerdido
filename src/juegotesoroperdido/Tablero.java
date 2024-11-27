@@ -140,7 +140,7 @@ public class Tablero {
     }
 
     public void verificarEstadoJuego(Jugador jugador, Resultado resultado) {
-        if (minas[jugador.getX()][jugador.getY()]) {
+        if (minas[jugador.getX()][jugador.getY()]==true) {
             jugador.perderVida();
             System.out.println("Pisaste una mina. Vidas restantes: " + jugador.getVidas());
 
@@ -157,7 +157,7 @@ public class Tablero {
             }
         } else if (validarL()==true && tablero[tesoroX][tesoroY]=='*' ) {
                         System.out.println("Tesoro encontrado.");
-                    juegoTerminado = true;
+                     juegoTerminado = true;
                      resultado.setLlegadaTesoro(true);
         }
     }

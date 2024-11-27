@@ -93,7 +93,7 @@ public class JuegoTesoroPerdido {
                 System.out.println("Partida " + (i + 1) + ":");
                 System.out.println("Jugador: " + r.getNombre());
                 System.out.println("Resultado: " + (r.isLlegadaTesoro() ? "Encontro el tesoro" : "No encontro el tesoro."));
-                System.out.println("Tiempo jugado: " + r.getTiempo() + " minutos y " + r.getTiempo() + " segundos.");
+                System.out.println("Tiempo jugado: " + r.getTiempo().toMinutesPart() + " minutos y " + r.getTiempo().toSecondsPart() + " segundos.");
                 System.out.println("--------------------");
             }
         }

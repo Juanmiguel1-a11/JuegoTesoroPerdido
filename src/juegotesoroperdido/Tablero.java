@@ -57,13 +57,7 @@ public class Tablero {
                     tesoroY = jugador.getY() + horizontal;
                     posicionValida = true;
                 }
-            } else {
-                if (jugador.getY() + horizontal < SIZE && jugador.getX() + vertical < SIZE) {
-                    tesoroY = jugador.getY() + horizontal;
-                    tesoroX = jugador.getX() + vertical;
-                    posicionValida = true;
-                }
-            }
+            } 
         }
 
         tablero[tesoroX][tesoroY] = 'T'; // Revelar el tesoro para depuración

@@ -111,6 +111,9 @@ public class Tablero {
                 jugador.setY(jugador.getY() - 1); break;
             case "d": if (jugador.getY() < SIZE - 1)
                 jugador.setY(jugador.getY() + 1); break;
+            case"o":
+                System.out.println("Juego terminado");
+                juegoTerminado = true;break;
             default: System.out.println("Movimiento no valido"); return;
         }
 

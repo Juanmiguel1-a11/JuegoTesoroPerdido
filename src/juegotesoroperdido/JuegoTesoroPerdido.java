@@ -17,7 +17,7 @@ public class JuegoTesoroPerdido {
         Scanner sc = new Scanner(System.in);
         boolean continuar = true;
 
-        while (continuar==true) {
+        while (continuar) {
             System.out.println("1. Juego Nuevo");
             System.out.println("2. Estadisticas");
             System.out.println("3. Salir");
@@ -43,6 +43,7 @@ public class JuegoTesoroPerdido {
                 }
             } catch (Exception e) {
                 System.out.println("Entrada no valida. Por favor, ingresa un numero (1, 2 o 3).");
+                sc.nextLine();
             }
         }
     }

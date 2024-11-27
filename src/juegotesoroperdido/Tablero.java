@@ -157,8 +157,8 @@ public class Tablero {
             }
         } else if (validarL()==true && tablero[tesoroX][tesoroY]=='*' ) {
                         System.out.println("Tesoro encontrado.");
-            juegoTerminado = true;
-            resultado.setLlegadaTesoro(true);
+                    juegoTerminado = true;
+                     resultado.setLlegadaTesoro(true);
         }
     }
 

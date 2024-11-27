@@ -39,7 +39,7 @@ public class Resultado {
 
     public void mostrarResultado() {
         System.out.println("Jugador: " + nombre);
-        if (llegadaTesoro) {
+        if (llegadaTesoro==true) {
             System.out.println("Has llegado al tesoro");
         } else {
             System.out.println("No lograste llegar al tesoro.");

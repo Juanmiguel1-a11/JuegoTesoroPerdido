@@ -17,7 +17,7 @@ public class JuegoTesoroPerdido {
         Scanner sc = new Scanner(System.in);
         boolean continuar = true;
 
-        while (continuar) {
+        while (continuar==true) {
             System.out.println("1. Juego Nuevo");
             System.out.println("2. Estadisticas");
             System.out.println("3. Salir");
